@@ -1,0 +1,46 @@
+<!--
+<div *ngFor="let br of children">
+  <div>
+    <app-branch [branch]="br"></app-branch>
+  </div>
+  <mat-accordion>
+    <mat-expansion-panel>
+      test
+    </mat-expansion-panel>
+  </mat-accordion>
+      <app-tree-elem [children]="br.children" *ngIf="br.children"></app-tree-elem>
+</div>
+-->
+
+<!--
+<mat-accordion [multi]="true">
+  <div *ngFor="let br of children">
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{br.name}}
+        </mat-panel-title>
+      <mat-panel-description>
+        Wert:
+        <i *ngIf="br.valueCalculated">{{br.value}}</i>
+        <i *ngIf="!br.valueCalculated">Wert nicht berechnet</i>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <div style="text-align: center" *ngIf="br.logic != 'null'">{{br.logic}}</div>
+    <app-tree-elem [children]="br.children" *ngIf="br.children"></app-tree-elem>
+  </mat-expansion-panel>
+
+  </div>
+</mat-accordion>
+-->
+<table style="border-collapse: collapse; width: 100%;" border="1">
+  <tbody>
+  <tr>
+    <td style="text-align: center" *ngFor="let br of children">
+      <app-branch [branch]="br"></app-branch>
+      <app-tree-elem [children]="br.children" *ngIf="br.children"></app-tree-elem>
+    </td>
+  </tr>
+  </tbody>
+</table>

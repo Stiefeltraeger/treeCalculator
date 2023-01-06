@@ -1,0 +1,12 @@
+<mat-card  style="margin: 5px" [style.background-color]= "branch.valueCalculated ? 'yellow' : 'white'">
+  <mat-card-content>
+    <div>{{branch.name}}</div>
+    <i *ngIf="branch.valueCalculated">{{branch.value}}</i>
+    <i *ngIf="!branch.valueCalculated">Wert nicht berechnet</i>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button (click)="tree.calculateValuesForAllBellow(branch)">Wert berechnen</button>
+    <button mat-button>Editieren</button>
+  </mat-card-actions>
+
+</mat-card>
