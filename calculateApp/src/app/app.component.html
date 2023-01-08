@@ -1,21 +1,4 @@
-<!--
-<mat-tab-group>
-  <div *ngFor="let tree of treeService.trees">
-    <mat-tab [label]="tree.name">
-      <table style="text-align: center; width: 100%" border="1">
-        <tbody>
-        <div *ngFor="let d of tree.getDept()">
-          <tr>
-            <td *ngFor="let br of tree.getLevelBranches(d)">
-              <app-branch [branch]="br" [tree]="tree"></app-branch>
-            </td>
-          </tr>
-        </div>
-        </tbody>
-      </table>
-    </mat-tab>
-  </div>
-</mat-tab-group>
--->
-<mat-toolbar></mat-toolbar>
+<mat-toolbar>
+  <button mat-raised-button (click)="treeService.trees[0].resetTree()">Baum zurücksetzen</button>
+</mat-toolbar>
 <app-tree-elem [children]="treeService.startingElem"></app-tree-elem>

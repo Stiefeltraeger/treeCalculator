@@ -10,7 +10,7 @@ export class Tree{
   }
 
   calculateValuesForAllBellow(branch: Branch): void{
-    if (!branch.valueCalculated) {
+    if (true) {
       if (branch.children.length === 0){
         throw new Error('Cant calculate the branch because children are undefined')
       }
@@ -64,5 +64,12 @@ export class Tree{
   public getLevelBranches(level: number): Branch[]{
     const ret = this.branches.filter((br) => br.level === level)
     return ret
+  }
+
+  public resetTree(): void{
+    for (let br of this.branches){
+      br.valueCalculated = false
+      br.value = 0
+    }
   }
 }

@@ -13,8 +13,6 @@ export class TreeServiceService {
     this.trees = []
     //EBENE6
     let angriffAufKRITIS = new Branch('Angriff auf KRITIS', [], true)
-    angriffAufKRITIS.value = 1
-    angriffAufKRITIS.valueCalculated = true
     angriffAufKRITIS.level = 6
     let attraktivitaetAPkt = new Branch('Attraktivität A. Punkt', [], true)
     attraktivitaetAPkt.value = 3
@@ -25,8 +23,6 @@ export class TreeServiceService {
     attraktivitaetAMittel.valueCalculated = true
     attraktivitaetAMittel.level = 6
     let uebersRoteLinien = new Branch('Überschreitung roter Linien', [], true)
-    uebersRoteLinien.value = 1
-    uebersRoteLinien.valueCalculated = true
     uebersRoteLinien.level = 6
     //EBENE5
     let hassUndRache = new Branch('Hass & Rache', [uebersRoteLinien, attraktivitaetAMittel], true)
@@ -83,12 +79,8 @@ export class TreeServiceService {
     eigenEntwicklung.logic = 'AND'
     eigenEntwicklung.level = 4
     let kenntnisseDomaene = new Branch('Kenntnisse Domäne', [], true)
-    kenntnisseDomaene.value = 5
-    kenntnisseDomaene.valueCalculated = true
     kenntnisseDomaene.level = 4
-    let handhabbarkeitAMittel = new Branch('Angstgefühle', [], true)
-    handhabbarkeitAMittel.value = 5
-    handhabbarkeitAMittel.valueCalculated = true
+    let handhabbarkeitAMittel = new Branch('Handhabbarkeit der A. Mittel', [], true)
     handhabbarkeitAMittel.level = 4
     //EBENE3
     let erpressbarkeitAngegriffener = new Branch('Erpressbarkeit des Angegriffenen', [rachegefuehle, angstgefuehle], true)

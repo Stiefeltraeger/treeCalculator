@@ -1,12 +1,33 @@
 <mat-card  style="margin: 5px" [style.background-color]= "branch.valueCalculated ? 'yellow' : 'white'">
   <mat-card-content>
     <div>{{branch.name}}</div>
-    <i *ngIf="branch.valueCalculated">{{branch.value}}</i>
-    <i *ngIf="!branch.valueCalculated">Wert nicht berechnet</i>
+    <i *ngIf="branch.valueCalculated">{{branch.value}}
+      <mat-form-field class="example-form-field">
+        <input matInput type="number" placeholder="Wert für Branch eingeben" [(ngModel)]="value">
+        <button (click)="changeValue()">
+          Wert eingeben
+        </button>
+      </mat-form-field>
+    </i>
+    <i *ngIf="!branch.valueCalculated">
+
+      <div *ngIf="branch.children.length > 0">Wert nicht berechnet</div>
+      <div *ngIf="branch.children.length === 0">
+        <mat-form-field class="example-form-field">
+        <input matInput type="number" placeholder="Wert für Branch eingeben" [(ngModel)]="value">
+          <button (click)="changeValue()">
+            Wert eingeben
+          </button>
+      </mat-form-field></div>
+    </i>
+    <div>{{branch.logic}}</div>
+    <mat-radio-group aria-label="Select an option">
+      <mat-radio-button value="1" (click)="branch.logic = 'AND'">AND</mat-radio-button>
+      <mat-radio-button value="2" (click)="branch.logic = 'OR'">OR</mat-radio-button>
+    </mat-radio-group>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-button (click)="tree.calculateValuesForAllBellow(branch)">Wert berechnen</button>
-    <button mat-button>Editieren</button>
+    <button *ngIf="branch.children.length != 0" mat-button (click)="tree.calculateValuesForAllBellow(branch)">Wert berechnen</button>
   </mat-card-actions>
 
 </mat-card>
