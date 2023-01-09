@@ -1,7 +1,9 @@
 <mat-card  style="margin: 5px" [style.background-color]= "branch.valueCalculated ? 'yellow' : 'white'">
   <mat-card-content>
     <div>{{branch.name}}</div>
-    <i *ngIf="branch.valueCalculated">{{branch.value}}
+    <i *ngIf="branch.valueCalculated">
+      <span *ngIf="!branch.positive">-</span>
+      {{branch.value}}
       <mat-form-field class="example-form-field">
         <input matInput type="number" placeholder="Wert für Branch eingeben" [(ngModel)]="value">
         <button (click)="changeValue()">

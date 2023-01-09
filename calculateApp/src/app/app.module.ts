@@ -13,7 +13,6 @@ import {MatInputModule} from "@angular/material/input";
 import {MatTreeModule} from "@angular/material/tree";
 import {MatTableModule} from "@angular/material/table";
 import {MatToolbarModule} from "@angular/material/toolbar";
-import { BranchEditorComponent } from './components/branch-editor/branch-editor.component';
 import {FormsModule} from "@angular/forms";
 import {MatRadioModule} from "@angular/material/radio";
 
@@ -24,7 +23,6 @@ import {MatRadioModule} from "@angular/material/radio";
     AppComponent,
     BranchComponent,
     TreeElemComponent,
-    BranchEditorComponent
   ],
   imports: [
     BrowserModule,
