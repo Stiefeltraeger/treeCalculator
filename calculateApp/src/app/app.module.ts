@@ -15,6 +15,8 @@ import {MatTableModule} from "@angular/material/table";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {FormsModule} from "@angular/forms";
 import {MatRadioModule} from "@angular/material/radio";
+import {NgbModal, NgbModule} from "@ng-bootstrap/ng-bootstrap";
+import {MatButtonToggleModule} from "@angular/material/button-toggle";
 
 
 
@@ -38,6 +40,8 @@ import {MatRadioModule} from "@angular/material/radio";
     MatToolbarModule,
     FormsModule,
     MatRadioModule,
+    NgbModule,
+    MatButtonToggleModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
