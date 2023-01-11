@@ -17,6 +17,7 @@ import {FormsModule} from "@angular/forms";
 import {MatRadioModule} from "@angular/material/radio";
 import {NgbModal, NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
+import {MatCheckboxModule} from "@angular/material/checkbox";
 
 
 
@@ -26,23 +27,24 @@ import {MatButtonToggleModule} from "@angular/material/button-toggle";
     BranchComponent,
     TreeElemComponent,
   ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    MatTabsModule,
-    MatCardModule,
-    MatButtonModule,
-    MatGridListModule,
-    MatExpansionModule,
-    MatInputModule,
-    MatTreeModule,
-    MatTableModule,
-    MatToolbarModule,
-    FormsModule,
-    MatRadioModule,
-    NgbModule,
-    MatButtonToggleModule,
-  ],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        MatTabsModule,
+        MatCardModule,
+        MatButtonModule,
+        MatGridListModule,
+        MatExpansionModule,
+        MatInputModule,
+        MatTreeModule,
+        MatTableModule,
+        MatToolbarModule,
+        FormsModule,
+        MatRadioModule,
+        NgbModule,
+        MatButtonToggleModule,
+        MatCheckboxModule,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

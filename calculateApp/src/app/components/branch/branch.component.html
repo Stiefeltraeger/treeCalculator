@@ -69,6 +69,10 @@
         </div>
       </div>
     </div>
+    <mat-checkbox [(ngModel)]="branch.usedInCalculation">
+      <div *ngIf="branch.usedInCalculation">Branch in Berechnung eingebunden</div>
+      <div *ngIf="!branch.usedInCalculation">Branch nicht in Berechnung eingebunden</div>
+    </mat-checkbox>
   </mat-card-actions>
 
 </mat-card>

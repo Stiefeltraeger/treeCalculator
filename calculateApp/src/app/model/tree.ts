@@ -16,7 +16,7 @@ export class Tree{
       }
       let calculatedValues = []
       //first all values that are calculated
-      for (let v of branch.children.filter((child) => child.valueCalculated)){
+      for (let v of branch.children.filter((child) => child.valueCalculated && child.usedInCalculation)){
         let value = v.value
         if (!v.positive){
           value = 6 - value
@@ -24,7 +24,7 @@ export class Tree{
         calculatedValues.push(value)
       }
       // then a recursion to get all the uncalculated values
-      for (let uc of branch.children.filter((child) => !child.valueCalculated)){
+      for (let uc of branch.children.filter((child) => !child.valueCalculated && child.usedInCalculation)){
         this.calculateValuesForAllBellow(uc)
         calculatedValues.push(uc.value)
       }

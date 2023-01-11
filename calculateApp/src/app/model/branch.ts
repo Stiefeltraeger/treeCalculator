@@ -10,6 +10,7 @@ export class Branch {
   value: number;
   valueCalculated: boolean
   level: number
+  usedInCalculation: boolean = true
   constructor(name: string, children: Branch[], positive: boolean) {
     this.name = name
     this.children = children
