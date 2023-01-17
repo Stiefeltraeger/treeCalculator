@@ -104,7 +104,6 @@ export class TreeServiceService {
 
 //EBENE2
     let angriffsAbsicht = new Branch('Angriffsabsicht', [erpressbarkeitAngegriffener, motivationAngreifer], true)
-    angriffsAbsicht.logic = 'AND'
     angriffsAbsicht.level = 2
 
     let angriffsfaehigkeit = new Branch('Angriffsfähigkeit', [schutzDAngr, verfuegbrAMittel, durchfuekeitDAngriffs], true)

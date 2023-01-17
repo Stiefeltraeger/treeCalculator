@@ -1,6 +1,3 @@
-import {Tree} from "./tree";
-import {Input} from "@angular/core";
-
 export class Branch {
 
   name: string

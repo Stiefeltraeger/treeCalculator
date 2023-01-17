@@ -33,14 +33,30 @@ export class Tree{
         if (a > b) return 1
         if (a < b) return -1
         else return 0
-      })}
-      if (branch.logic === 'OR'){calculatedValues.sort((a,b) => {
+      })
+        branch.value = calculatedValues[0]
+        branch.valueCalculated = true;
+      }
+      else if (branch.logic === 'OR'){calculatedValues.sort((a,b) => {
         if (a > b) return -1
         if (a < b) return 1
         else return 0
-      })}
-      branch.value = calculatedValues[0]
-      branch.valueCalculated = true;
+      })
+        branch.value = calculatedValues[0]
+        branch.valueCalculated = true;
+      }
+
+      else if (branch.name === 'Angriffsabsicht'){
+        let nerf = 0
+        if(branch.children[0].value === 1){
+          nerf = 2
+        }
+        else if (branch.children[0].value === 1){
+          nerf = 1
+        }
+        branch.value = branch.children[1].value - nerf
+        branch.valueCalculated = true
+      }
     }
   }
 

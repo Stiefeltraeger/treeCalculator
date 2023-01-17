@@ -14,7 +14,7 @@
     <i *ngIf="!branch.valueCalculated">
 
       <div *ngIf="branch.children.length > 0">Wert nicht berechnet</div>
-      <div *ngIf="branch.children.length === 0">
+      <div *ngIf="true">
         <mat-form-field class="example-form-field">
         <input matInput type="number" placeholder="Wert für Branch eingeben" [(ngModel)]="value">
           <button (click)="changeValue()">
