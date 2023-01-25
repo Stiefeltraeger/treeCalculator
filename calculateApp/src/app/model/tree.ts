@@ -15,6 +15,13 @@ export class Tree{
         throw new Error('Cant calculate the branch because children are undefined')
       }
       let calculatedValues = []
+
+      // then a recursion to get all the uncalculated values
+      for (let uc of branch.children.filter((child) => !child.valueCalculated && child.usedInCalculation)){
+        this.calculateValuesForAllBellow(uc)
+        calculatedValues.push(uc.value)
+      }
+
       //first all values that are calculated
       for (let v of branch.children.filter((child) => child.valueCalculated && child.usedInCalculation)){
         let value = v.value
@@ -23,27 +30,29 @@ export class Tree{
         }
         calculatedValues.push(value)
       }
-      // then a recursion to get all the uncalculated values
-      for (let uc of branch.children.filter((child) => !child.valueCalculated && child.usedInCalculation)){
-        this.calculateValuesForAllBellow(uc)
-        calculatedValues.push(uc.value)
-      }
+
+
 
       if (branch.logic === 'AND'){calculatedValues.sort((a,b) => {
         if (a > b) return 1
         if (a < b) return -1
         else return 0
       })
+        console.log(branch.name + calculatedValues)
+
         branch.value = calculatedValues[0]
         branch.valueCalculated = true;
+
       }
       else if (branch.logic === 'OR'){calculatedValues.sort((a,b) => {
         if (a > b) return -1
         if (a < b) return 1
         else return 0
       })
+        console.log(branch.name + calculatedValues)
         branch.value = calculatedValues[0]
         branch.valueCalculated = true;
+
       }
 
       else if (branch.name === 'Angriffsabsicht'){
