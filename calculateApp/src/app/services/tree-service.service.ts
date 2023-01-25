@@ -72,7 +72,7 @@ export class TreeServiceService {
     fremdEntwicklung.logic = 'AND'
     fremdEntwicklung.level = 4
 
-    let eigenEntwicklung = new Branch('Angstgefühle', [beschaffbarkeitAStoffe, kenntnisseEntwicklung, ressourcenEE], true)
+    let eigenEntwicklung = new Branch('Eigenentwicklung', [beschaffbarkeitAStoffe, kenntnisseEntwicklung, ressourcenEE], true)
     eigenEntwicklung.logic = 'AND'
     eigenEntwicklung.level = 4
 

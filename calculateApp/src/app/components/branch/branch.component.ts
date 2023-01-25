@@ -20,11 +20,13 @@ export class BranchComponent implements OnInit{
 
   constructor(private modalService: NgbModal) {}
 
-  value = 0;
+  value = 1;
 
   changeValue(): void{
-    this.branch.value = this.value
-    this.branch.valueCalculated = true
+    if (this.value > 0 && this.value < 6) {
+      this.branch.value = this.value
+      this.branch.valueCalculated = true
+    }
   }
 
   public addBranches(): void{
