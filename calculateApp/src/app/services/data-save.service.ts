@@ -63,7 +63,7 @@ export class DataSaveService {
 
 
   public test(): void{
-
+    console.log(this.getTreeFromLocal())
   }
 
 }

@@ -14,9 +14,9 @@ export class TreeServiceService {
     this.trees = []
 
     try {
-      this.startingElem = [dataSaveServ.jsonToTree(dataSaveServ.data)]
-    } catch (error) {
       this.startingElem = [dataSaveServ.getTreeFromLocal()]
+    } catch (error) {
+      this.startingElem = [dataSaveServ.jsonToTree(dataSaveServ.data)]
     }
   }
 
