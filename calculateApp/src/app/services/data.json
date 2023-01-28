@@ -1,0 +1,136 @@
+{"name": "Bedrohung",
+  "positive" : true,
+  "logic" : "AND"
+,"children":[
+  {"name": "Angriffsabsicht",
+    "positive" : true,
+    "logic" : "null"
+  ,"children":[
+    {"name": "Erpressbarkeit des Angegriffenen",
+      "positive" : true,
+      "logic" : "AND"
+    ,"children":[
+      {"name": "Rachegefühle",
+        "positive" : false,
+        "logic" : "AND"
+      ,"children":[
+        {"name": "Hass & Rache",
+          "positive" : true,
+          "logic" : "AND"
+        ,"children":[
+          {"name": "Überschreitung roter Linien",
+            "positive" : true,
+            "logic" : "null"
+          ,"children":[]},
+          {"name": "Attraktivität A. Mittel",
+            "positive" : true,
+            "logic" : "null"
+          ,"children":[]}]},
+        {"name": "Mediale Aufmerksamkeit",
+          "positive" : true,
+          "logic" : "OR"
+        ,"children":[
+          {"name": "Attraktivität A. Mittel",
+            "positive" : true,
+            "logic" : "null"
+          ,"children":[]},
+          {"name": "Attraktivität A. Punkt",
+            "positive" : true,
+            "logic" : "null"
+          ,"children":[]}]}]},
+      {"name": "Angstgefühle",
+        "positive" : true,
+        "logic" : "AND"
+      ,"children":[
+        {"name": "Mediale Aufmerksamkeit",
+          "positive" : true,
+          "logic" : "OR"
+        ,"children":[
+          {"name": "Attraktivität A. Mittel",
+            "positive" : true,
+            "logic" : "null"
+          ,"children":[]},
+          {"name": "Attraktivität A. Punkt",
+            "positive" : true,
+            "logic" : "null"
+          ,"children":[]}]},
+        {"name": "Angst & Schrecken",
+          "positive" : true,
+          "logic" : "AND"
+        ,"children":[
+          {"name": "Attraktivität A. Punkt",
+            "positive" : true,
+            "logic" : "null"
+          ,"children":[]},
+          {"name": "Angriff auf KRITIS",
+            "positive" : true,
+            "logic" : "null"
+          ,"children":[]}]}]}]},
+    {"name": "Motivation des Angreifers",
+      "positive" : true,
+      "logic" : "null"
+    ,"children":[]}]},
+  {"name": "Angriffsfähigkeit",
+    "positive" : true,
+    "logic" : "AND"
+  ,"children":[
+    {"name": "Schutz des Angreifers",
+      "positive" : true,
+      "logic" : "AND"
+    ,"children":[
+      {"name": "Ort des Angreifers",
+        "positive" : true,
+        "logic" : "null"
+      ,"children":[]},
+      {"name": "A. Nachverfolgbarkeit",
+        "positive" : false,
+        "logic" : "null"
+      ,"children":[]}]},
+    {"name": "Verfügbarkeit der A. Mittel",
+      "positive" : true,
+      "logic" : "OR"
+    ,"children":[
+      {"name": "Fremdentwicklung",
+        "positive" : true,
+        "logic" : "AND"
+      ,"children":[
+        {"name": "Beschaffbarkeit A. Mittel",
+          "positive" : true,
+          "logic" : "null"
+        ,"children":[]},
+        {"name": "Kenntnisse Entwicklung",
+          "positive" : true,
+          "logic" : "null"
+        ,"children":[]},
+        {"name": "Ressourcen (Fremdentwicklung)",
+          "positive" : true,
+          "logic" : "null"
+        ,"children":[]}]},
+      {"name": "Eigenentwicklung",
+        "positive" : true,
+        "logic" : "AND"
+      ,"children":[
+        {"name": "Beschaffbarkeit A.Stoffe ",
+          "positive" : true,
+          "logic" : "null"
+        ,"children":[]},
+        {"name": "Kenntnisse Entwicklung",
+          "positive" : true,
+          "logic" : "null"
+        ,"children":[]},
+        {"name": "Ressourcen (Eigenentwicklung)",
+          "positive" : true,
+          "logic" : "null"
+        ,"children":[]}]}]},
+    {"name": "Durchführbarkeit des Angriffs",
+      "positive" : true,
+      "logic" : "AND"
+    ,"children":[
+      {"name": "Kenntnisse Domäne",
+        "positive" : true,
+        "logic" : "null"
+      ,"children":[]},
+      {"name": "Handhabbarkeit der A. Mittel",
+        "positive" : true,
+        "logic" : "null"
+      ,"children":[]}]}]}]}

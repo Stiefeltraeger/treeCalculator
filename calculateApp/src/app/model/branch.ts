@@ -8,6 +8,7 @@ export class Branch {
   valueCalculated: boolean
   level: number
   usedInCalculation: boolean = true
+  toDelete: boolean = false
   constructor(name: string, children: Branch[], positive: boolean) {
     this.name = name
     this.children = children

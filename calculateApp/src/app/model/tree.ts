@@ -1,12 +1,10 @@
 import {Branch} from "./branch";
 
 export class Tree{
-  branches: Branch[]
   name: string
 
-  constructor(name: string, branches: Branch[]) {
+  constructor(name: string) {
     this.name = name;
-    this.branches = branches
   }
 
   calculateValuesForAllBellow(branch: Branch): void{
@@ -69,32 +67,11 @@ export class Tree{
     }
   }
 
-  public getDept(): number[]{
-    let dept = 1
-    for(let branch of this.branches){
-      if (branch.level > dept){
-        dept = branch.level
-      }
-    }
-
-    let ret = []
-
-    for (let i = 1; i <= dept; i = i + 1){
-      ret.push(i)
-    }
-    console.log(ret)
-    return ret
-  }
-
-  public getLevelBranches(level: number): Branch[]{
-    const ret = this.branches.filter((br) => br.level === level)
-    return ret
-  }
-
-  public resetTree(): void{
-    for (let br of this.branches){
-      br.valueCalculated = false
-      br.value = 0
+  public resetTree(branch: Branch): void{
+    branch.value = 0
+    branch.valueCalculated = false
+    for (let br of branch.children){
+      this.resetTree(br)
     }
   }
 }

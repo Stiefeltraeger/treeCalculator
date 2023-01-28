@@ -70,6 +70,9 @@
         </div>
       </div>
     </div>
+    <button mat-button (click)="this.deleteBranch(this.branch)">
+      Branch löschen
+    </button>
     <mat-checkbox [(ngModel)]="branch.usedInCalculation">
       <div *ngIf="branch.usedInCalculation">Branch in Berechnung eingebunden</div>
       <div *ngIf="!branch.usedInCalculation">Branch nicht in Berechnung eingebunden</div>

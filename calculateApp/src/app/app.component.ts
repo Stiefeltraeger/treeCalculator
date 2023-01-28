@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { TreeServiceService } from "./services/tree-service.service";
+import {DataSaveService} from "./services/data-save.service";
 
 @Component({
   selector: "app-root",
@@ -8,5 +9,6 @@ import { TreeServiceService } from "./services/tree-service.service";
 })
 export class AppComponent {
   title = "CodeSandbox";
-  treeService = new TreeServiceService;
+  saveService = new DataSaveService();
+  treeService = new TreeServiceService(this.saveService);
 }
