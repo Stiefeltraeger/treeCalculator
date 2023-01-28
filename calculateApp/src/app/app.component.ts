@@ -11,4 +11,8 @@ export class AppComponent {
   title = "CodeSandbox";
   saveService = new DataSaveService();
   treeService = new TreeServiceService(this.saveService);
+  branch1Name!: string
+  branch1pos: boolean = true
+  branch2Name!: string
+  branch2pos: boolean = true
 }

@@ -2,6 +2,35 @@
   <button mat-raised-button (click)="treeService.trees[0].resetTree(treeService.startingElem[0])">Baum zurücksetzen</button>
   <button mat-raised-button (click)="saveService.storeTreeInLocal(treeService.startingElem[0])">Änderungen Speichern</button>
   <button mat-raised-button (click)="treeService.resetToStandardTree()">Ursprungsbaum wiederherstellen</button>
+  <div ngbDropdown class="d-inline-block">
+    <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+      Branch hinzufügen
+    </button>
+  <div ngbDropdownMenu aria-labelledby="dropdownBasic2">
+    <div class="modal-body">
+      <mat-card>
+        <mat-form-field class="example-full-width">
+          <textarea [(ngModel)]="branch1Name" matInput placeholder="Übergeordnete Branch"></textarea>
+        </mat-form-field>
+        <mat-card-actions (click)="branch1pos = !branch1pos">
+          <mat-button-toggle *ngIf="branch1pos">Positiver Wert</mat-button-toggle>
+          <mat-button-toggle *ngIf="!branch1pos">Negativer Wert</mat-button-toggle>
+        </mat-card-actions>
+      </mat-card>
+      <mat-card>
+        <mat-form-field class="example-full-width">
+          <textarea [(ngModel)]="branch2Name" matInput placeholder="Schwester Branch"></textarea>
+        </mat-form-field>
+        <mat-card-actions (click)="branch2pos = !branch2pos">
+          <mat-button-toggle *ngIf="branch2pos">Positiver Wert</mat-button-toggle>
+          <mat-button-toggle *ngIf="!branch2pos">Negativer Wert</mat-button-toggle>
+        </mat-card-actions>
+      </mat-card>
+      <button (click)="treeService.expandAbove(branch1Name, branch2Name, branch1pos, branch2pos)">Branches hinzufügen</button>
+    </div>
+  </div>
+  </div>
   <button mat-raised-button >test</button>
+
 </mat-toolbar>
 <app-tree-elem [children]="treeService.startingElem"></app-tree-elem>

@@ -23,4 +23,11 @@ export class TreeServiceService {
   public resetToStandardTree(): void{
     this.startingElem = [this.dataSaveServ.jsonToTree(this.dataSaveServ.data)]
   }
+
+  public expandAbove(newParentName: string, newSisterName: string, newParentPos: boolean, newSisterPos: boolean): void{
+    let nP = new Branch(newParentName, [], newParentPos)
+    let nS = new Branch(newSisterName, [], newSisterPos)
+    nP.children.push(this.startingElem[0], nS)
+    this.startingElem = [nP]
+  }
 }
