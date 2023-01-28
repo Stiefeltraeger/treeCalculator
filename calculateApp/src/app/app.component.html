@@ -4,7 +4,7 @@
   <button mat-raised-button (click)="treeService.resetToStandardTree()">Ursprungsbaum wiederherstellen</button>
   <div ngbDropdown class="d-inline-block">
     <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
-      Branch hinzufügen
+      Höhere Branch hinzufügen
     </button>
   <div ngbDropdownMenu aria-labelledby="dropdownBasic2">
     <div class="modal-body">
@@ -30,7 +30,6 @@
     </div>
   </div>
   </div>
-  <button mat-raised-button (click)="saveService.test()">test</button>
 
 </mat-toolbar>
 <app-tree-elem [children]="treeService.startingElem"></app-tree-elem>

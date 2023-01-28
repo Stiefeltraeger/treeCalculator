@@ -1,5 +1,5 @@
 <mat-card  style="margin: 5px" [style.background-color]= "branch.valueCalculated ? 'orange' : 'white'">
-  <mat-card-content>
+  <mat-card-content [style.background-color]= "branch.usedInCalculation? 'white' : 'grey'">
     <div>{{branch.name}}</div>
     <i *ngIf="branch.valueCalculated">
       <span *ngIf="!branch.positive">-</span>
