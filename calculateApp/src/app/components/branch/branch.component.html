@@ -30,7 +30,7 @@
     </mat-radio-group>
   </mat-card-content>
   <mat-card-actions>
-    <button *ngIf="branch.children.length != 0" mat-button (click)="tree.calculateValuesForAllBellow(branch)">Wert berechnen</button>
+    <button *ngIf="branch.children.length != 0" mat-button (click)="treeService.calculateValuesForAllBellow(branch)">Wert berechnen</button>
     <div ngbDropdown class="d-inline-block">
       <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
         Branch hinzufügen

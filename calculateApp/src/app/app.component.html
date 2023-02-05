@@ -1,5 +1,5 @@
 <mat-toolbar>
-  <button mat-raised-button (click)="treeService.trees[0].resetTree(treeService.startingElem[0])">Baum zurücksetzen</button>
+  <button mat-raised-button (click)="treeService.resetTree(treeService.startingElem[0])">Baum zurücksetzen</button>
   <button mat-raised-button (click)="saveService.storeTreeInLocal(treeService.startingElem[0])">Änderungen Speichern</button>
   <button mat-raised-button (click)="treeService.resetToStandardTree()">Ursprungsbaum wiederherstellen</button>
   <div ngbDropdown class="d-inline-block">
